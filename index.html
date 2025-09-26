@@ -1,22 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ConnectX</title>
+    <title>ConnectX - Animated</title>
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+
+    <!-- ==== HTML Code Starts Here ==== -->
+
+    <!-- Animation ke liye container -->
+    <div id="tsparticles"></div>
+
     <nav>
         <div class="navbar">
             <div class="logo-name">
-                <!-- <img src="Nav Logo.png" alt=""> -->
                 <p>Connect<span>X</span></p>
             </div>
             <div class="nav-tabs">
@@ -27,17 +33,13 @@
                 <a href="#" class="job clear">Job Post</a>
                 <a href="#" class="mentorship clear">Mentorships</a>
                 <a href="#" class="signup clear">SignUp</a>
-                <a href="#" class="login clear">Login</a>
-                <!-- <a href="#" class="profile"></a> -->
+                <!-- <a href="#" class="login clear">Login</a> -->
             </div>
-
         </div>
     </nav>
     <!-- Navbaar Section Done  -->
 
-
-        <div class="main">
-
+    <div class="main">
         <section class="hero">
             <div class="hero-left">
                 <div class="hero-left-upper-part">
@@ -45,70 +47,74 @@
                     <h1>A Platform for Alumni & Students<br>Connecting People, Opportunities, & Knowledge.</h1>
                     <h2 id="changing-text">Connecting Alumni Across the India</h2>
                 </div>
-
                 <div class="btn">
-                    <a href=""><button id="herosection-btn">Join Now</button></a>
+                    <a href="#"><button id="herosection-btn">Join Now</button></a>
                 </div>
-            </div>
-
-
-
-            <!-- <button id="hero-section-btn">Join Now</button> -->
-            <div class="hero-right">
-                <!-- <video src="assets/final hero section video.mp4" autoplay></video> -->
             </div>
         </section>
 
-
         <div class="offer-section">
-            <div class="feature-line"></div>
-            <div class="feature1"></div>
-            <div class="feature2"></div>
-            <div class="feature3"></div>
-            <div class="feature4"></div>
-            <div class="feature5"></div>
             <h1>What We Offer</h1>
-            <div class="main-cards-div1">
-                <div id="div1-offer-card1" class="cards-div1">
-                    <span class="material-symbols-outlined">groups</span>
-                    <h2>Alumni Directory</h2>
-                    <p>Discover and reconnect with alumni worldwide to grow your personal and professional network.</p>
+            <p class="subtitle">A powerful network to support your journey, from campus to career and beyond.</p>
+
+            <div class="timeline-container">
+                <div class="timeline-item left">
+                    <div class="timeline-card">
+                        <span class="material-symbols-outlined">groups</span>
+                        <h2>Alumni Directory</h2>
+                        <p>Discover and reconnect with alumni worldwide to grow your personal and professional network.
+                        </p>
+                    </div>
                 </div>
-                <div id="div1-offer-card2" class="cards-div1">
-                    <span class="material-symbols-outlined">business_center</span>
-                    <h2>Job Board</h2>
-                    <p>Unlock exclusive career opportunities shared directly by alumni and industry leaders.</p>
+                <div class="timeline-item right">
+                    <div class="timeline-card">
+                        <span class="material-symbols-outlined">business_center</span>
+                        <h2>Job Board</h2>
+                        <p>Unlock exclusive career opportunities shared directly by alumni and industry leaders.</p>
+                    </div>
                 </div>
-                <div id="div1-offer-card3" class="cards-div1">
-                    <span class="material-symbols-outlined">calendar_month</span>
-                    <h2>Events & Reunions</h2>
-                    <p>Stay engaged through alumni meetups, reunions, and networking events that build lifelong bonds.
-                    </p>
+                <div class="timeline-item left">
+                    <div class="timeline-card">
+                        <span class="material-symbols-outlined">calendar_month</span>
+                        <h2>Events & Reunions</h2>
+                        <p>Stay engaged through alumni meetups, reunions, and networking events that build lifelong
+                            bonds.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="main-cards-div2">
-                <div id="div2-offer-card1" class="cards-div2">
-                    <span class="material-symbols-outlined">handshake</span>
-                    <h2>Mentorship Program</h2>
-                    <p>Bridge the gap between students and alumni with mentorship that accelerates career readiness.</p>
+                <div class="timeline-item right">
+                    <div class="timeline-card">
+                        <span class="material-symbols-outlined">handshake</span>
+                        <h2>Mentorship Program</h2>
+                        <p>Bridge the gap between students and alumni with mentorship that accelerates career readiness.
+                        </p>
+                    </div>
                 </div>
-                <div id="div2-offer-card2" class="cards-div2">
-                    <span class="material-symbols-outlined">currency_rupee_circle</span>
-                    <h2>Fundraising Campaigns</h2>
-                    <p>Support innovation and campus growth by contributing to meaningful alumni-driven initiatives.</p>
+                <div class="timeline-item left">
+                    <div class="timeline-card">
+                        <span class="material-symbols-outlined">currency_rupee</span>
+                        <h2>Fundraising Campaigns</h2>
+                        <p>Support innovation and campus growth by contributing to meaningful alumni-driven initiatives.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
-
 
         <div class="join-section">
             <h1>Ready to reconnect and grow?</h1>
-            <a href=""><button class="join-section-btn">Join Our Alumni Network</button></a>
+            <a href="#"><button class="join-section-btn">Join Our Alumni Network</button></a>
             <p>Discover the power of your alumni community today!</p>
         </div>
-
     </div>
 
+    <!-- ==== HTML Code Ends Here ==== -->
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+<script src="script.js"></script>
 
 </body>
+
 </html>
