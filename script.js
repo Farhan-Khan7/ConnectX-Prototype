@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         background: {
             color: {
-                value: "#121212" // Dark background color
+                value: "#0a192f" // Dark background color
             }
         },
         particles: {
@@ -18,7 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             },
             color: {
-                value: "#ff3b00" // Particle ka naya rang
+                // value: "#ff3b00" // Particle ka naya rang
+                value: "#0a192f"
             },
             shape: {
                 type: "circle"
@@ -104,3 +105,55 @@ changeText();
 
 // Har 3 sec me change karo
 setInterval(changeText, 3000);
+
+
+// Text Changing Js Done
+
+
+const navTabs = document.querySelector(".nav-tabs");
+const homeLink = document.querySelector(".home");
+const alumniLink = document.querySelector(".alumni");
+const eventsLink = document.querySelector(".events");
+const donationsLink = document.querySelector(".donatitions");
+const jobLink = document.querySelector(".job");
+const mentorshipLink = document.querySelector(".mentorship");
+const signupLink = document.querySelector(".signup");
+const homeMain = document.querySelector(".homeMain")
+
+
+homeLink.addEventListener("click" , function(){
+    homeMain.style.display = "initial"
+})
+
+
+alumniLink.addEventListener("click" , function(){
+    homeMain.style.display = "none"
+})
+
+
+eventsLink.addEventListener("click" , function(){
+    homeMain.style.display = "none"
+})
+
+
+donationsLink.addEventListener("click" , function(){
+    homeMain.style.display = "none"
+})
+
+
+jobLink.addEventListener("click" , function(){
+    homeMain.style.display = "none"
+})
+
+
+mentorshipLink.addEventListener("click" , function(){
+    homeMain.style.display = "none"
+})
+
+
+signupLink.addEventListener("click" , function(){
+    homeMain.style.display = "none"
+})
+
+
+
