@@ -81,15 +81,17 @@ body {
     transition: color 0.3s ease;
 }
 
-.nav-tabs a.active{
+.nav-tabs a.active {
     /* color: var(--primary-color); */
     color: #ffd60a;
 }
-.nav-tabs a:hover{
+
+.nav-tabs a:hover {
     /* color: var(--primary-color); */
     color: #ffd60a;
 }
-.nav-tabs a:active{
+
+.nav-tabs a:active {
     color: #ffd60a;
 }
 
@@ -396,6 +398,449 @@ body {
     color: #aaa;
 }
 
+/* ===== Home Main Section complete Here */
+
+
+.alumniMain{
+    margin-top: 4%;
+    display: none;
+    height: 100vh;
+    width: 100%;
+    background-color: #000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==== Form Container CSS ==== */
+.signupMain {
+    display: none;
+    /* padding-left: 25%; */
+    background-color: transparent;
+    height: fit-content;
+    width: 100%;
+}
+
+.form-changes-btn {
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-changes-btn button {
+    cursor: pointer;
+    font-size: larger;
+    border: 1px solid #ffd60a;
+    border-radius: 50px;
+    padding: 10px 20px;
+    margin: 15px;
+    transition: background-color 0.3s, color 0.3s;
+    background-color: transparent;
+    color: #fff;
+}
+
+.form-changes-btn button:hover {
+    background-color: #ffd60a;
+    color: #000;
+}
+
+.form-changes-btn button.active {
+    background-color: #ffd60a;
+    /* yellow background */
+    color: #000;
+    /* black text */
+}
+
+/* Form Container Styling */
+.alumni-container {
+    width: 100%;
+    height: 78vh;
+    margin-left: 23%;
+    max-width: 800px;
+    background-color: var(--form-background);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 0 30px rgba(255, 214, 10, 0.1);
+}
+
+.alumni-container h1 {
+    margin-bottom: 1.2rem;
+    text-align: center;
+    color: #8892b0;
+}
+
+.alumni-container form {
+    display: grid;
+    /* Using CSS Grid for layout */
+    grid-template-columns: 1fr 1fr;
+    /* 2 equal columns */
+    gap: 1rem;
+    /* Inputs ke beech me space */
+}
+
+/* Input Field Styling */
+.alumni-container input {
+    /* width property is not needed with grid */
+    padding: 0.5rem 1rem;
+    background-color: var(--input-background);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    color: var(--text-color);
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.alumni-container input::placeholder {
+    color: #8892b0;
+}
+
+.alumni-container input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 10px rgba(255, 214, 10, 0.3);
+}
+
+/* Submit Button Styling */
+.alumni-container input[type="submit"] {
+    grid-column: 1 / -1;
+    /* Make button span both columns */
+    padding: 0.9rem;
+    background-color: var(--primary-color);
+    color: #000;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.alumni-container input[type="submit"]:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 214, 10, 0.4);
+}
+
+.alumni-container p {
+    font-size: large;
+    padding: 1.5rem;
+    text-align: center;
+    color: #8892b0;
+
+}
+
+.alumni-container p span {
+    color: #ffd60a;
+    cursor: pointer;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .alumni-container form {
+        grid-template-columns: 1fr;
+        /* Switch to a single column on mobile */
+    }
+}
+
+
+/* ==================== Alumni Form styling Complete===================== */
+
+.student-container {
+    width: 100%;
+    max-width: 800px;
+    height: 75vh;
+    background-color: var(--form-background);
+    padding: 2.5rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 0 30px rgba(255, 214, 10, 0.1);
+    display: none;
+    margin-left: 23%;
+}
+
+.student-container h1 {
+    text-align: center;
+    /* font-size: 2rem; */
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #8892b0;
+}
+
+.student-container form {
+    display: grid;
+    /* Using CSS Grid for layout */
+    grid-template-columns: 1fr 1fr;
+    /* 2 equal columns */
+    gap: 1rem;
+    /* Inputs ke beech me space */
+}
+
+/* Input Field Styling */
+.student-container input {
+    padding: 0.8rem 1rem;
+    background-color: var(--input-background);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    color: var(--text-color);
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.student-container input::placeholder {
+    color: #8892b0;
+}
+
+.student-container input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 10px rgba(255, 214, 10, 0.3);
+}
+
+/* Submit Button Styling */
+.student-container input[type="submit"] {
+    grid-column: 1 / -1;
+    /* Make button span both columns */
+    padding: 0.9rem;
+    background-color: var(--primary-color);
+    color: #000;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.student-container input[type="submit"]:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 214, 10, 0.4);
+}
+
+.student-container p {
+    font-size: large;
+    padding: 1.5rem;
+    text-align: center;
+    color: #8892b0;
+
+}
+
+.student-container p span {
+    color: #ffd60a;
+    cursor: pointer;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .student-container form {
+        grid-template-columns: 1fr;
+        /* Switch to a single column on mobile */
+    }
+}
+
+
+/* ====================Student Form styling Complete===================== */
+
+/* Form Container Styling */
+ 
+
+
+
+.institue-container {
+    width: 100%;
+    max-width: 800px;
+    height: 77vh;
+    background-color: var(--form-background);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 0 30px rgba(255, 214, 10, 0.1);
+    display: none;
+    margin-left: 23%;
+}
+.institue-container h1 {
+    text-align: center;
+    /* font-size: 2rem; */
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #8892b0;
+
+}
+.institue-container form {
+    display: grid;
+    /* Using CSS Grid for layout */
+    grid-template-columns: 1fr 1fr;
+    /* 2 equal columns */
+    gap: 1rem;
+    /* Inputs ke beech me space */
+}
+
+/* Input Field Styling */
+.institue-container input {
+    padding: 0.8rem 1rem;
+    background-color: var(--input-background);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    color: var(--text-color);
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.institue-container textarea {
+    padding: 0.8rem 1rem;
+    background-color: var(--input-background);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    color: var(--text-color);
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.institue-container input::placeholder {
+    color: #8892b0;
+}
+
+.institue-container input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 10px rgba(255, 214, 10, 0.3);
+}
+
+/* Submit Button Styling */
+.institue-container input[type="submit"] {
+    grid-column: 1 / -1;
+    /* Make button span both columns */
+    padding: 0.9rem;
+    background-color: var(--primary-color);
+    color: #000;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.institue-container input[type="submit"]:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 214, 10, 0.4);
+}
+
+.institue-container p {
+    font-size: large;
+    padding: 1.5rem;
+    text-align: center;
+    color: #8892b0;
+
+}
+
+.institue-container p span {
+    color: #ffd60a;
+    cursor: pointer;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .institue-container form {
+        grid-template-columns: 1fr;
+        /* Switch to a single column on mobile */
+    }
+}
+
+/* ======================== Institute form style complete ==================== */
+
+
+
+.login-container {
+  width: 100%;
+  max-width: 500px;
+  background-color: var(--form-background);
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  margin: auto;
+  display: none;
+  margin-top: 50px;
+  box-shadow: 0 0 30px rgba(255, 214, 10, 0.1);
+}
+
+
+.login-container input {
+  display: block;
+  width: 100%;
+  margin: 20px 0;
+  padding: 0.8rem;
+  font-size: large;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background: var(--input-background);
+  color: var(--text-color);
+}
+.login-container input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 10px rgba(255, 214, 10, 0.3);
+}
+.login-container input[type="submit"] {
+    grid-column: 1 / -1;
+    /* Make button span both columns */
+    padding: 0.9rem;
+    background-color: var(--primary-color);
+    color: #000;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.login-container input[type="submit"] {
+  background-color: var(--primary-color);
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+}
+.login-container input[type="submit"]:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 214, 10, 0.4);
+}
+
+.login-container p {
+    font-size: large;
+    padding: 1.5rem;
+    text-align: center;
+    color: #8892b0;
+
+}
+
+.login-container p span {
+    color: #ffd60a;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* ==== Footer CSS Starts Here ==== */
@@ -432,7 +877,8 @@ body {
 
 .footer-column a,
 .footer-column p {
-    color: #aaa; /* text-secondary replacement */
+    color: #aaa;
+    /* text-secondary replacement */
     text-decoration: none;
     transition: color 0.3s ease;
     display: flex;
@@ -466,6 +912,7 @@ body {
 }
 
 .footer-bottom p {
-    color: #aaa; /* text-secondary replacement */
+    color: #aaa;
+    /* text-secondary replacement */
     font-size: 0.9rem;
 }

@@ -151,45 +151,142 @@
     </div>
 
     <!-- ==== HTML HomeMain Sections Code Ends Here ==== -->
-    
-    
+
+
     <div class="alumniMain">
         
+    </div>
+
+
+    <!-- ==== HTML AlumniMain Sections Code Ends Here ==== -->
+
+    <div class="signupMain">
+        <div class="form-changes-btn">
+            <button id="alumni" class="active">Alumni</button>
+            <button id="students">Students</button>
+            <button id="institute">Institute</button>
+        </div>
+
+
+        <div class="alumni-container">
+            <h1>Create Your Account</h1>
+            <form>
+                <input type="text" placeholder="Full Name" id="alumni-name">
+                <input type="email" placeholder="Email" id="alumni-email">
+                <input type="password" placeholder="Password" id="alumni-pswd">
+                <input type="number" placeholder="Graduation Year" id="alumni-graduation-year">
+                <input type="url" placeholder="LinkedIn URL" id="alumni-linkedIn-url">
+                <input type="url" placeholder="GitHub URL" id="alumni-github-url">
+                <input type="text" placeholder="Company" id="alumni-company">
+                <input type="text" placeholder="Job Title" id="alumni-job-title">
+                <input type="text" placeholder="Skills (Comma-Seprated )" id="alumni-skills">
+                <input type="submit">
+            </form>
+            <p>Already have an account? <span id="Login-btn-alumni">Log in</span></p>
+        </div>
+
+        <div class="student-container">
+            <h1>Create Your Account</h1>
+            <form>
+                <input type="text" placeholder="Institute Name" id="student-institue">
+                <input type="text" placeholder="Full Name" id="student-name">
+                <input type="email" placeholder="Email" id="student-email">
+                <input type="password" placeholder="Password" id="student-pswd">
+                <input type="text" placeholder="Which Year" id="student-studyofYear">
+                <input type="text" placeholder="Field Of Study" id="student-fieldOfStudy">
+                <input type="url" placeholder="LinkedIn URL" id="student-linkedin-url">
+                <input type="text" placeholder="Skills (Comma-Seprated )" id="student-skills">
+                <input type="submit">
+
+            </form>
+            <p>Already have an account? <span id="Login-btn-student">Log in</span></p>
+        </div>
+
+
+        <div class="institue-container">
+            <h1>Create Your Account</h1>
+            <form>
+                <input type="text" placeholder="Institute Name" id="institute-name">
+                <input type="url" placeholder="Institue Website" id="institute-website">
+                <input type="text" placeholder="Institue Email" id="institute-email">
+                <input type="password" placeholder="Institue Password" id="institute-pswd">
+                <input type="text" placeholder="Institue location" id="institute-location"><br>
+                <textarea id="institute-description" placeholder="Institue Description"></textarea>
+                <input type="submit">
+            </form>
+            <p>Already have an account? <span id="Login-btn-institute">Log in</span></p>
+        </div>
+
+
+        <div class="login-container" id="alumni-login">
+            <h1>Login</h1>
+            <form>
+                <input type="email" placeholder="Email" id="login-email">
+                <input type="password" placeholder="Password" id="login-pswd">
+                <input type="submit" value="Log In">
+            </form>
+            <p>Don’t have an account?
+                <span id="Signup-btn-alumni">Sign Up</span>
+                
+            </p>
+        </div>
+
+
+        <div class="login-container" id="student-login">
+            <h1>Login</h1>
+            <form>
+                <input type="email" placeholder="Email" id="login-email">
+                <input type="password" placeholder="Password" id="login-pswd">
+                <input type="submit" value="Log In">
+            </form>
+            <p>Don’t have an account?
+                <span id="Signup-btn-student">Sign Up</span>
+                
+            </p>
+        </div>
+
+        <div class="login-container" id="institute-login">
+            <h1>Login</h1>
+            <form>
+                <input type="email" placeholder="Email" id="login-email">
+                <input type="password" placeholder="Password" id="login-pswd">
+                <input type="submit" value="Log In">
+            </form>
+            <p>Don’t have an account?
+                <span id="Signup-btn-institute">Sign Up</span>
+                
+            </p>
+        </div>
 
     </div>
-    
-     <!-- ==== HTML AlumniMain Sections Code Ends Here ==== -->
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    <!-- ==== HTML SignupMain Sections Code Ends Here ==== -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <footer class="site-footer">
         <div class="footer-container">
             <div class="footer-column">
@@ -207,8 +304,10 @@
                     <li><a href="#"><span class="material-symbols-outlined">calendar_month</span>Events Calendar</a>
                     </li>
                     <li><a href="#"><span class="material-symbols-outlined">work</span>Job Board</a></li>
-                    <li><a href="#"><span class="material-symbols-outlined">handshake</span>Mentorship Program</a></li>
-                    <li><a href="#"><span class="material-symbols-outlined">volunteer_activism</span>Make a Donation</a>
+                    <li><a href="#"><span class="material-symbols-outlined">handshake</span>Mentorship Program</a>
+                    </li>
+                    <li><a href="#"><span class="material-symbols-outlined">volunteer_activism</span>Make a
+                            Donation</a>
                     </li>
                 </ul>
             </div>
@@ -221,7 +320,7 @@
                     <li><a href="#"><span class="material-symbols-outlined">code</span>Tech Blog</a></li>
                 </ul>
             </div>
-            
+
             <div class="footer-column">
                 <h3>Contact Us</h3>
                 <ul>
@@ -231,7 +330,8 @@
                     </li>
                     <li><a href="mailto:alumni@university.edu"><span
                                 class="material-symbols-outlined">mail</span>alumni@university.edu</a></li>
-                    <li><a href="tel:+1234567890"><span class="material-symbols-outlined">call</span>(123) 456-7890</a>
+                    <li><a href="tel:+1234567890"><span class="material-symbols-outlined">call</span>(123)
+                            456-7890</a>
                     </li>
                 </ul>
             </div>
@@ -242,7 +342,7 @@
     </footer>
 
 
-    
+
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
     <script src="script.js"></script>
 
