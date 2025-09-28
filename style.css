@@ -401,23 +401,6 @@ body {
 /* ===== Home Main Section complete Here */
 
 
-.alumniMain{
-    margin-top: 4%;
-    display: none;
-    height: 100vh;
-    width: 100%;
-    background-color: #000;
-}
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -757,6 +740,49 @@ body {
 }
 
 /* ======================== Institute form style complete ==================== */
+
+
+.alumniMain{
+    margin-top: 4%;
+    display: none;
+    height: 100vh;
+    width: 100%;
+    /* background-color: #000; */
+}
+
+
+.heading{
+    width: 100%;
+    height: fit-content;
+    /* height: 30vh; */
+    /* margin-top: 0%; */
+    padding: 4rem 0rem 0rem 5rem;
+    background-color: transparent;
+    /* background-color: #0a192f; */
+}
+.heading h1{
+    color: #ffd60a;
+    font-weight: lighter;
+    font-size: 2.5rem;
+}
+.heading p{
+    color: #8892b0;
+    font-size: large;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
