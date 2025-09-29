@@ -133,7 +133,6 @@ const footer = document.querySelector(".site-footer")
 
 homeLink.addEventListener("click", function () {
     homeMain.style.display = "block"
-    footer.style.display = "block"
     signupMain.style.display = "none"
     alumniMain.style.display = "none"
     signupLink.style.color = "#E0E0E0"
@@ -148,7 +147,6 @@ alumniLink.addEventListener("click", function () {
     homeMain.style.display = "none"
     signupMain.style.display = "none"
     alumniMain.style.display = "block"
-    footer.style.display = "block"
 })
 
 
@@ -213,6 +211,7 @@ studentsBtn.addEventListener("click", function () {
     studentContainer.style.display = "block"
     alumniContainer.style.display = "none"
     instituteContainer.style.display = "none"
+    loginContainer.style.display = "none"
 })
 
 alumniBtn.addEventListener("click", function () {
@@ -246,21 +245,21 @@ const instituteLogin = document.querySelector("#institute-login")
 
 
 // ============== ALUMNI LOGIN SIGNUP PAGE =================
-signupBtnAlumni.addEventListener("click", function(){
+signupBtnAlumni.addEventListener("click", function () {
     alumniLogin.style.display = "none"
     alumniContainer.style.display = "block"
 })
-loginBtnAlumni.addEventListener("click", function(){
+loginBtnAlumni.addEventListener("click", function () {
     alumniLogin.style.display = "block"
     alumniContainer.style.display = "none"
 })
 
 // ============== STUDENT LOGIN SIGNUP PAGE =================
-signupBtnStudent.addEventListener("click", function(){
+signupBtnStudent.addEventListener("click", function () {
     studentLogin.style.display = "none"
     studentContainer.style.display = "block"
 })
-loginBtnstudent.addEventListener("click", function(){
+loginBtnstudent.addEventListener("click", function () {
     studentLogin.style.display = "block"
     studentContainer.style.display = "none"
 
@@ -269,13 +268,129 @@ loginBtnstudent.addEventListener("click", function(){
 
 // ==============  INSTITUTE LOGIN SIGNUP PAGE =================
 
-signupBtnInstitute.addEventListener("click", function(){
+signupBtnInstitute.addEventListener("click", function () {
     instituteLogin.style.display = "none"
     instituteContainer.style.display = "block"
 })
-loginBtnInstitute.addEventListener("click", function(){
+loginBtnInstitute.addEventListener("click", function () {
     instituteLogin.style.display = "block"
     instituteContainer.style.display = "none"
 })
+
+
+
+
+
+
+
+
+
+
+
+
+homeLink.addEventListener("click", () => {
+    homeMain.style.display = "block";
+    signupMain.style.display = "none";
+    alumniMain.style.display = "none";
+    footer.style.display = "block";
+});
+
+alumniLink.addEventListener("click", () => {
+    homeMain.style.display = "none";
+    signupMain.style.display = "none";
+    alumniMain.style.display = "block";
+    footer.style.display = "block";
+});
+
+signupLink.addEventListener("click", () => {
+    homeMain.style.display = "none";
+    alumniMain.style.display = "none";
+    signupMain.style.display = "block";
+    footer.style.display = "none";
+});
+
+
+// ================== SIGNUP/LOGIN TOGGLE ==================
+
+
+// signupBtnAlumni?.addEventListener("click", () => {
+//     alumniLogin.style.display = "none";
+//     alumniContainer.style.display = "block";
+// });
+
+// loginBtnAlumni?.addEventListener("click", () => {
+//     alumniLogin.style.display = "block";
+//     alumniContainer.style.display = "none";
+// });
+
+
+// ================== ALUMNI SIGNUP FORM -> CREATE CARD ==================
+const alumniForm = document.querySelector("#alumni-form");
+const alumniCardsContainer = document.querySelector(".alumniMain .cards");
+const photoInput = document.querySelector("#alumni-photo"); // file input
+
+alumniForm.addEventListener("submit", function (e) {
+    e.preventDefault(); // default submit stop
+
+    // --- Form Data ---
+    const name = document.querySelector("#alumni-name").value;
+    const graduationYear = document.querySelector("#alumni-graduation-year").value;
+    const instituteName = document.querySelector("#alumni-institute-name").value;
+    const linkedIn = document.querySelector("#alumni-linkedIn-url").value;
+    const skills = document.querySelector("#alumni-skills").value.split(",");
+    const github = document.querySelector("#alumni-github-url").value;
+    const company = document.querySelector("#alumni-company").value;
+    const jobTitle = document.querySelector("#alumni-job-title").value;
+
+    // --- Photo Handling (agar user upload kare to usi ka use hoga) ---
+    let photoURL = `https://placehold.co/80x80/0a192f/ccd6f6?text=${name[0] || 'A'}`;
+    if (photoInput.files && photoInput.files[0]) {
+        photoURL = URL.createObjectURL(photoInput.files[0]);
+    }
+
+    // --- Create Card ---
+    const card = document.createElement("div");
+    card.classList.add("alumni-card");
+
+    card.innerHTML = `
+            <div class="card-header">
+                <img src="${photoURL}" alt="Profile Picture" class="profile-pic">
+                <div class="header-info">
+                    <h2>${name}</h2>
+                <p>Position : ${jobTitle || "Alumni"}</p>
+                <p>Company : ${company || "Not Specified"}</p>
+                </div>
+            </div>
+            <ul class="info-section">
+                <li><i class="fa-solid fa-graduation-cap"></i> Graduation Year: ${graduationYear}</li>
+                        <li><i class="fa-solid fa-graduation-cap"></i> Institute: ${instituteName}</li>
+            </ul>
+            <div class="skills-section">
+                <h3>Skills</h3>
+                <div class="skills-pills">
+                    ${skills.map(skill => `<span class="skill">${skill.trim()}</span>`).join("")}
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="social-links">
+                    ${linkedIn ? `<a href="${linkedIn}" target="_blank"><i class="fa-brands fa-linkedin"></i></a>` : ""}
+                    ${github ? `<a href="${github}" target="_blank"><i class="fa-brands fa-github"></i></a>` : ""}
+                </div>
+                <button class="connect-btn">Connect</button>
+            </div>
+        `;
+
+    // --- Add Card to Alumni Directory ---
+    alumniCardsContainer.appendChild(card);
+
+    // --- Reset form ---
+    alumniForm.reset();
+
+    // --- After signup -> Show Login Page ---
+    alumniContainer.style.display = "none";
+    alumniLogin.style.display = "block";
+    signupMain.style.display = "block";
+});
+
 
 

@@ -414,7 +414,7 @@ body {
 }
 
 .form-changes-btn {
-    margin-top: 5%;
+    margin-top: 4.5%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -447,34 +447,34 @@ body {
 /* Form Container Styling */
 .alumni-container {
     width: 100%;
-    height: 78vh;
-    margin-left: 23%;
     max-width: 800px;
+    height: 78vh;
+    margin: 0rem auto; /* Centered with top/bottom margin */
     background-color: var(--form-background);
-    padding: 1.5rem;
+    padding: 0rem 1rem;
     border-radius: 12px;
     border: 1px solid var(--border-color);
     box-shadow: 0 0 30px rgba(255, 214, 10, 0.1);
 }
 
 .alumni-container h1 {
-    margin-bottom: 1.2rem;
+    margin: .9rem;
     text-align: center;
     color: #8892b0;
 }
 
+/* --- Form Grid Layout --- */
+/* This grid layout properly arranges the name and other fields */
 .alumni-container form {
     display: grid;
-    /* Using CSS Grid for layout */
-    grid-template-columns: 1fr 1fr;
-    /* 2 equal columns */
+    grid-template-columns: 1fr 1fr; /* 2 equal columns */
     gap: 1rem;
-    /* Inputs ke beech me space */
+    align-items: start; /* Prevents grid items from stretching vertically */
 }
 
-/* Input Field Styling */
-.alumni-container input {
-    /* width property is not needed with grid */
+/* --- General Input Field Styling --- */
+/* This applies to text, email, password, etc. */
+.alumni-container input:not([type="submit"]):not([type="file"]) {
     padding: 0.5rem 1rem;
     background-color: var(--input-background);
     border: 1px solid var(--border-color);
@@ -488,16 +488,51 @@ body {
     color: #8892b0;
 }
 
-.alumni-container input:focus {
+
+/* --- Custom File Input Styling --- */
+/* This section handles the "Upload Your Photo" field */
+
+.alumni-container input[type="file"] {
+    position: relative;
+    padding: 0.5rem 1rem;
+    background-color: var(--input-background);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: transparent; /* Hides the original "No file chosen" text */
+    cursor: pointer;
+}
+
+/* This hides the default "Choose File" button from the browser */
+.alumni-container input[type="file"]::-webkit-file-upload-button {
+    visibility: hidden;
+    display: none;
+}
+
+/* This creates our custom placeholder text */
+.alumni-container input[type="file"]::before {
+    content: 'Upload Your Photo'; /* The new placeholder text */
+    color: #8892b0;
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+    white-space: nowrap;
+}
+
+
+/* --- Focus Styling --- */
+/* Applies a consistent focus effect to all input fields */
+.alumni-container input:not([type="submit"]):focus {
     outline: none;
     border-color: var(--primary-color);
     box-shadow: 0 0 10px rgba(255, 214, 10, 0.3);
 }
 
-/* Submit Button Styling */
+/* --- Submit Button Styling --- */
 .alumni-container input[type="submit"] {
-    grid-column: 1 / -1;
-    /* Make button span both columns */
+    grid-column: 1 / -1; /* Make button span both columns */
     padding: 0.9rem;
     background-color: var(--primary-color);
     color: #000;
@@ -505,7 +540,8 @@ body {
     font-size: 1.1rem;
     font-weight: 600;
     cursor: pointer;
-    margin-top: 1rem;
+    border-radius: 15px;
+    /* margin-top: 1rem; */
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -514,12 +550,12 @@ body {
     box-shadow: 0 5px 15px rgba(255, 214, 10, 0.4);
 }
 
+/* --- Bottom Text Styling --- */
 .alumni-container p {
     font-size: large;
-    padding: 1.5rem;
+    padding: .7rem;
     text-align: center;
     color: #8892b0;
-
 }
 
 .alumni-container p span {
@@ -527,16 +563,12 @@ body {
     cursor: pointer;
 }
 
-/* Responsive */
+/* --- Responsive Design --- */
 @media screen and (max-width: 768px) {
     .alumni-container form {
-        grid-template-columns: 1fr;
-        /* Switch to a single column on mobile */
+        grid-template-columns: 1fr; /* Switch to a single column on mobile */
     }
-}
-
-
-/* ==================== Alumni Form styling Complete===================== */
+}/* ==================== Alumni Form styling Complete===================== */
 
 .student-container {
     width: 100%;
@@ -941,4 +973,190 @@ body {
     color: #aaa;
     /* text-secondary replacement */
     font-size: 0.9rem;
+}
+
+
+
+
+
+
+
+
+/* ========== Cards Code ================== */
+
+
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin: 2rem;
+}
+.alumni-card {
+  width: 400px;
+  background-color: #0e1f3a;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 214, 10, 0.3);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column; /* column layout */
+  justify-content: space-between; /* space between header/skills/footer */
+  min-height: 350px; /* fix card height so alignment same */
+}
+
+
+.card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.profile-pic {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ffd60a;
+  margin-right: 1rem;
+}
+
+.header-info h2 {
+  margin: 0;
+  font-size: 1.3rem;
+  color: #fff;
+}
+
+.header-info p {
+  margin: 0;
+  color: #8892b0;
+  font-size: 0.9rem;
+}
+
+.info-section {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1rem;
+  color: #8892b0;
+}
+
+
+.skills-section {
+  flex: 1; /* skills section grow karega aur footer ko neeche dhaklega */
+}
+.skills-section h3 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.skills-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skill {
+  background-color: #0a192f;
+  color: #ffd60a;
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  border: 1px solid rgba(255, 214, 10, 0.3);
+}
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(255, 214, 10, 0.3);
+  padding-top: 1rem;
+  margin-top: 1rem;
+  background-color: transparent; /* background black ki zarurat nahi */
+  position: relative; /* absolute hata do */
+}
+.social-links a {
+  color: #8892b0;
+  margin-right: 1rem;
+  font-size: 1.2rem;
+}
+
+.social-links a:hover {
+  color: #ffd60a;
+}
+
+.connect-btn {
+  background-color: #ffd60a;
+  color: #0a192f;
+  border: none;
+  padding: 0.4rem 1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.connect-btn:hover {
+  opacity: 0.9;
+}
+
+/* Signup Form */
+
+.login-container {
+  width: 90%;
+  max-width: 500px;
+  margin: 2rem auto;
+  background-color: #0e1f3a;
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 214, 10, 0.3);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.login-container h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #ffd60a;
+}
+
+
+.login-container input {
+  width: 100%;
+  padding: 0.8rem;
+  margin: 0.6rem 0;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 214, 10, 0.3);
+  background-color: #0a192f;
+  color: #fff;
+}
+
+
+.login-container input[type="submit"] {
+  background-color: #ffd60a;
+  color: #000;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+
+.login-container p {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+
+.login-container p span {
+  color: #ffd60a;
+  cursor: pointer;
+}
+
+.photo-upload {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.photo-upload label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #ffd60a;
 }
